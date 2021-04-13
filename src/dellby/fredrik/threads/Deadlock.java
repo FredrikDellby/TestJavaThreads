@@ -1,4 +1,4 @@
-package com.balazsholczer.udemy;
+package dellby.fredrik.threads;
 
 import java.util.concurrent.locks.*;
 

@@ -1,4 +1,4 @@
-package com.balazsholczer.udemy;
+package dellby.fredrik.threads;
 
 class Worker implements Runnable {
 	private volatile boolean terminated;
