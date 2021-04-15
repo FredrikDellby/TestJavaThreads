@@ -32,7 +32,7 @@ class Counter implements Runnable{
 
 		@Override
 		public void run() {
-			for(int i=0;i<10;i++){
+			for(int i=0;i<50;i++){
 				System.out.println(i);
 				try {
 					Thread.sleep(300);
@@ -58,18 +58,16 @@ class Task implements Runnable {
 		try {
 			TimeUnit.SECONDS.sleep(duration);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			Thread.currentThread().interrupt();
 		}
 	}
 }
 
 class StockMarketUpdater implements Runnable {
-
 	@Override
 	public void run() {
 		System.out.println("Updating and downloading stock market data from the web...");
 	}
-	
 }
 
 public class ExecutorServiceDemo {
@@ -87,7 +85,7 @@ public class ExecutorServiceDemo {
 		
 		try {
 			if (!executorService.awaitTermination(1000, TimeUnit.MILLISECONDS)) {
-				executorService.shutdownNow();
+				//executorService.shutdownNow();
 			}
 		} catch (InterruptedException e) {
 			executorService.shutdownNow();
