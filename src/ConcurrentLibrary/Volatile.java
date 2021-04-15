@@ -1,6 +1,6 @@
-package dellby.fredrik.threads;
+package ConcurrentLibrary;
 
-class Worker implements Runnable {
+class VolatileWorker implements Runnable {
 	private volatile boolean terminated;
 	
 	@Override
@@ -27,8 +27,8 @@ class Worker implements Runnable {
 public class Volatile {
 	
 	public static void main(String[] args) {
-		Worker worker = new Worker();
-		Thread t1 = new Thread(worker);
+		VolatileWorker VolatileWorker = new VolatileWorker();
+		Thread t1 = new Thread(VolatileWorker);
 		t1.start();
 		
 		try {
@@ -37,7 +37,7 @@ public class Volatile {
 			e.printStackTrace();
 		}
 		
-		worker.setTerminated(true);
+		VolatileWorker.setTerminated(true);
 		System.out.println("Algorithm is terminated...");
 	}
 	

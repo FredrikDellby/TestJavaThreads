@@ -1,4 +1,4 @@
-package dellby.fredrik.threads;
+package ConcurrentLibrary;
 
 public class App {
     private static int counter = 0;

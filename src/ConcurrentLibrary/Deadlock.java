@@ -1,4 +1,4 @@
-package dellby.fredrik.threads;
+package ConcurrentLibrary;
 
 import java.util.concurrent.locks.*;
 
