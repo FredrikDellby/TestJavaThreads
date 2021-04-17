@@ -32,6 +32,7 @@ class Worker implements Runnable {
 	private int id;
 	private Random random;
 	private CyclicBarrier cyclicBarrier;
+	private float fl;
 
 	public Worker(int id, CyclicBarrier cyclicBarrier) {
 		this.cyclicBarrier = cyclicBarrier;
@@ -62,7 +63,7 @@ class Worker implements Runnable {
 		}
 	}
 
-	public String toString() { return "" + this.id; };
+	public String toString() { return "" + id; };
 }
 
 public class CyclicBarriers {

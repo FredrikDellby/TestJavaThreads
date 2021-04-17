@@ -1,6 +1,7 @@
 package ConcurrentLibrary;
 
-public class App {
+// BasicMultithreading/Lecture6
+public class SynchAndJoinDemo1 {
     private static int counter = 0;
 
     public static synchronized void increment() {
@@ -41,5 +42,6 @@ public class App {
 
     public static void main(String[] args) {
         process();
+        System.out.println(counter);
     }
 }
