@@ -1,7 +1,8 @@
-package ConcurrentLibrary;
+package MultithreadingConcepts;
 
 import java.util.concurrent.locks.*;
 
+// Section 5: Lecture 26-27
 public class Deadlock {
 	
 	private Lock lock1 = new ReentrantLock(true);

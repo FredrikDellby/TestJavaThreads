@@ -1,5 +1,6 @@
-package ConcurrentLibrary;
+package MultithreadingConcepts;
 
+// Section 4: Lecture 24
 class VolatileWorker implements Runnable {
 	private volatile boolean terminated;
 	

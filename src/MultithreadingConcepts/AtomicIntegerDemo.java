@@ -1,7 +1,8 @@
-package ConcurrentLibrary;
+package MultithreadingConcepts;
 
 import java.util.concurrent.atomic.*;
 
+// Section 5: Lecture 29
 public class AtomicIntegerDemo {
 	private static AtomicInteger counter = new AtomicInteger(0);
 

@@ -1,4 +1,4 @@
-package ConcurrentLibrary;
+package ConcurrentCollections;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- *
+ * === Section 7: Lecture 44 ===
  * Latch --> multiple threads can wait for each other
  *
  * A CyclicBarrier is used in situations where you want to create a group of

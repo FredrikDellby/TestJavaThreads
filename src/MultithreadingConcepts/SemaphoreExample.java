@@ -1,4 +1,4 @@
-package ConcurrentLibrary;
+package MultithreadingConcepts;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -13,6 +13,8 @@ import java.util.concurrent.Semaphore;
  *		 Semaphore just keeps a count of the number available
  *		new Semaphore(int permits, boolean fair) !!!
  */
+// BasicMultithreading/Lecture12
+// Section 5: Lecture 30-33
 public class SemaphoreExample {
 	public static void main(String[] args) {
 

@@ -1,8 +1,10 @@
-package ConcurrentLibrary;
+package InterThreadCommunication;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+// BasicMultithreading/Lecture10
+// Section 4: Lecture 17, 21
 public class ReentrandLockDemo {
 
     private static int counter = 0;

@@ -1,8 +1,10 @@
-package ConcurrentLibrary;
+package InterThreadCommunication;
 
 import java.util.ArrayList;
 import java.util.List;
 
+// BasicMultithreading/Lecture9
+// Section 4: Lecture 20
 class Processor2 {
 
     private List<Integer> list = new ArrayList<>();
@@ -15,9 +17,9 @@ class Processor2 {
 
         synchronized (lock) {
 
-            while(true) {
+            while (true) {
 
-                if( list.size() == LIMIT ) {
+                if (list.size() == LIMIT) {
                     System.out.println("Waiting for removing items from the list...");
                     lock.wait();
                 } else {
@@ -54,7 +56,7 @@ class Processor2 {
     }
 }
 
-public class LockOnSeparateObjectDemo {
+public class ProducerAndConsumerDemo {
 
     static Processor2 processor = new Processor2();
 

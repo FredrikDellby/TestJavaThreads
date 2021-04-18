@@ -1,4 +1,4 @@
-package ConcurrentLibrary;
+package ConcurrentCollections;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
@@ -6,7 +6,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 ///**
-// * This is used to synchronize one or more tasks by forcing them to wait for the completion of a set of operations being performed by other tasks
+// * === Section 7: Lecture (41, 42), 43 ===
+// This is used to synchronize one or more tasks by forcing them to wait for the completion of a set of operations being performed by other tasks
 // * 
 // * 		- You give an initial count to a CountDownLatch object, and any task that calls await()
 // * 				on that object will block until the count reaches zero

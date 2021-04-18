@@ -1,8 +1,9 @@
-package ConcurrentLibrary;
+package MultithreadingConcepts;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.*;
 
+// Section 5: Lecture 26, 28
 public class Livelock {
 	
 	private Lock lock1 = new ReentrantLock(true);

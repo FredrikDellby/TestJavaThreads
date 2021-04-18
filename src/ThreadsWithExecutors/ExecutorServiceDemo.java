@@ -1,4 +1,4 @@
-package ConcurrentLibrary;
+package ThreadsWithExecutors;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -27,6 +27,7 @@ import java.util.concurrent.TimeUnit;
 	
 	 */
 
+	// Section 6: Lecture 34-38
 class Counter implements Runnable{
 
 		@Override

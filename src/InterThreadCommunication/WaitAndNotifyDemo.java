@@ -1,6 +1,7 @@
-package ConcurrentLibrary;
+package InterThreadCommunication;
 
 // BasicMultithreading/Lecture8
+// Section 4: Lecture 18
 class Processor {
 
     public void produce() throws InterruptedException {

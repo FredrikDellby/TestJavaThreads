@@ -1,4 +1,6 @@
-package ConcurrentLibrary;
+package ThreadsManipulation;
+
+// BasicMultithreading/Lecture5
 
 class SleepWorker implements Runnable {
 

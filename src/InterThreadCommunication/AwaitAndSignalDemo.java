@@ -1,10 +1,11 @@
-package ConcurrentLibrary;
+package InterThreadCommunication;
 
-// From lecture 11
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+// BasicMultithreading/Lecture11
+// Section 4: Lecture 22-23
 class ReentrantWorker {
 
     private Lock lock = new ReentrantLock();

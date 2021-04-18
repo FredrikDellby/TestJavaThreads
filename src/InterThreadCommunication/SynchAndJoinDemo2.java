@@ -1,6 +1,7 @@
-package ConcurrentLibrary;
+package InterThreadCommunication;
 
 // BasicMultithreading/Lecture7
+// Section 4: Lecture 14-15
 public class SynchAndJoinDemo2 {
     private static int count1 = 0;
     private static int count2 = 0;
