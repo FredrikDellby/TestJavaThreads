@@ -1,4 +1,4 @@
-package ConcurrentLibrary;
+package ConcurrentCollections;
 
 import java.util.concurrent.Exchanger;
 

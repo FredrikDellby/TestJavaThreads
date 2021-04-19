@@ -1,4 +1,4 @@
-package ConcurrentLibrary;
+package ConcurrentCollections;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.DelayQueue;
