@@ -45,7 +45,7 @@ class MainFrame extends JFrame implements ButtonListener {
 	private MineLayer[] mineLayers;
 	private MineSweeper[] mineSweepers;
 	
-	public MainFrame(){
+	public MainFrame() {
 		super(Constants.APP_NAME);
 		
 		toolbar = new Toolbar();
@@ -74,21 +74,21 @@ class MainFrame extends JFrame implements ButtonListener {
 		this.layersExecutor = Executors.newFixedThreadPool(Constants.NUMBER_OF_LAYERS);
 		this.sweepersExecutor = Executors.newFixedThreadPool(Constants.NUMBER_OF_SWEEPERS);
 	
-		try{
+		try {
 			
-			for(int i=0;i<Constants.NUMBER_OF_LAYERS;i++){
+			for (int i=0;i<Constants.NUMBER_OF_LAYERS;i++) {
 				mineLayers[i] = new MineLayer(i, board);
 				layersExecutor.execute(mineLayers[i]);
 			}
 			
-			for(int i=0;i<Constants.NUMBER_OF_SWEEPERS;i++){
+			for (int i=0;i<Constants.NUMBER_OF_SWEEPERS;i++) {
 				mineSweepers[i] = new MineSweeper(i, board);
 				sweepersExecutor.execute(mineSweepers[i]);
 			}
 			
-		}catch(Exception e){
+		} catch  (Exception e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			layersExecutor.shutdown();
 			sweepersExecutor.shutdown();
 		}		
@@ -97,11 +97,11 @@ class MainFrame extends JFrame implements ButtonListener {
 	@Override
 	public void stopClicked() {
 		
-		for(MineLayer mineLayer : this.mineLayers){
+		for (MineLayer mineLayer : this.mineLayers) {
 			mineLayer.setLayerRunning(false);
 		}
 		
-		for(MineSweeper mineSweeper : this.mineSweepers){
+		for (MineSweeper mineSweeper : this.mineSweepers) {
 			mineSweeper.setSweeperRunning(false);
 		}
 		
@@ -125,7 +125,7 @@ class MainFrame extends JFrame implements ButtonListener {
 
 class Constants {
 
-	private Constants(){
+	private Constants() {
 		
 	}
 	

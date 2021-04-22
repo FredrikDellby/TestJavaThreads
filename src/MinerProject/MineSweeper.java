@@ -19,18 +19,18 @@ public class MineSweeper implements Runnable{
 		
 		Random random = new Random();
 		
-		while(sweeperRunning){
+		while (sweeperRunning) {
 			
-			if( Thread.currentThread().isInterrupted()){
+			if (Thread.currentThread().isInterrupted()) {
 				return;
 			}
 			
 			int index = random.nextInt(Constants.BOARD_ROWS*Constants.BOARD_COLUMNS);
 			board.sweepMine(index);
 			
-			try{
+			try {
 				Thread.sleep(200);
-			}catch(InterruptedException e){
+			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}			
 		}

@@ -53,7 +53,7 @@ class Board extends JPanel {
 		this.numberOfMines = 0;
 	}
 
-	public void setMine(int index){
+	public void setMine(int index) {
 		cells[index].lock();
 		incrementBombNumber();
 		cells[index].setBackground(Color.RED);
@@ -62,16 +62,16 @@ class Board extends JPanel {
 		sleepThread(500);
 	}
 	
-	public void sweepMine(int index){
+	public void sweepMine(int index) {
 		
 		cells[index].lock();
 		decrementBombNumber();
 		
-		int row = (index / Constants.BOARD_ROWS ) % 2;
+		int row = (index / Constants.BOARD_ROWS) % 2;
 		
-		if( row == 0 ){
+		if (row == 0) {
 			cells[index].setBackground(index%2==0 ? Color.GRAY : Color.WHITE);
-		}else{
+		} else {
 			cells[index].setBackground(index%2==0 ? Color.WHITE : Color.GRAY);
 		}
 		
@@ -81,7 +81,7 @@ class Board extends JPanel {
 		
 	}
 	
-	public void clearBoard(){
+	public void clearBoard() {
 		for (int i = 0; i < Constants.BOARD_COLUMNS * Constants.BOARD_ROWS; i++) {
 
 			int row = (i / Constants.BOARD_ROWS) % 2;
@@ -95,9 +95,9 @@ class Board extends JPanel {
 	}
 
 	private void sleepThread(int duration) {
-		try{
+		try {
 			Thread.sleep(duration);
-		}catch(InterruptedException e){
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
@@ -107,7 +107,7 @@ class Board extends JPanel {
 	}
 }
 
-class Cell extends JPanel{
+class Cell extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -127,10 +127,10 @@ class Cell extends JPanel{
 		this.hasBomb = false;
 	}
 	
-	public void lock(){
-		try{
+	public void lock() {
+		try {
 			lock.tryLock(10,TimeUnit.HOURS);
-		}catch(InterruptedException e){
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
@@ -141,7 +141,7 @@ class Cell extends JPanel{
 
 	@Override
 	public String toString() {
-		return ""+this.id+"-"+state.toString()+"-"+hasBomb;
+		return "" + this.id + "-" + state.toString() + "-" + hasBomb;
 	}
 }
 
@@ -152,7 +152,7 @@ class Toolbar extends JPanel implements ActionListener {
 	private JButton stopButton;
 	private ButtonListener listener;
 	
-	public Toolbar(){
+	public Toolbar() {
 		
 		setLayout(new FlowLayout(FlowLayout.CENTER));
 		
@@ -175,9 +175,9 @@ class Toolbar extends JPanel implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		if( (JButton) event.getSource() == startButton && this.listener != null ){
+		if ((JButton) event.getSource() == startButton && this.listener != null) {
 			this.listener.startClicked();
-		}else{
+		} else {
 			this.listener.stopClicked();
 		}
 	}

@@ -2,13 +2,13 @@ package MinerProject;
 
 import java.util.Random;
 
-public class MineLayer implements Runnable{
+public class MineLayer implements Runnable {
 
 	private int id;
 	private Board board;
 	private volatile boolean layerRunning;
 	
-	public MineLayer(int id, Board board){
+	public MineLayer(int id, Board board) {
 		this.id = id;
 		this.board = board;
 		this.layerRunning = true;
@@ -19,18 +19,18 @@ public class MineLayer implements Runnable{
 		
 		Random random = new Random();
 		
-		while(layerRunning){
+		while(layerRunning) {
 			
-			if( Thread.currentThread().isInterrupted()){
+			if (Thread.currentThread().isInterrupted()) {
 				return;
 			}
 			
 			int index = random.nextInt(Constants.BOARD_ROWS*Constants.BOARD_COLUMNS);
 			board.setMine(index);
 			
-			try{
+			try {
 				Thread.sleep(200);
-			}catch(InterruptedException e){
+			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
