@@ -7,6 +7,7 @@ import java.util.concurrent.RecursiveTask;
 public class ForkJoinMax {
 
 	public static int THREASHOLD = 0;
+	private static int ARRAY_SIZE = 80000000;
 	
 	public static void main(String[] args) {
 		
@@ -32,9 +33,9 @@ public class ForkJoinMax {
 	private static long[] initializeNums() {
 		
 		Random random = new Random();
-		long[] nums = new long[30000000];
+		long[] nums = new long[ARRAY_SIZE];
 		
-		for(int i=0;i<300000000;++i)
+		for(int i=0; i<ARRAY_SIZE; i++)
 			nums[i] = random.nextInt(1000);
 		
 		return nums;
